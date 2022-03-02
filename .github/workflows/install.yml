@@ -17,3 +17,5 @@ jobs:
       - name: Vcpkg Search Boost
         run: |
           sudo -E vcpkg search boost 
+          sudo -E vcpkg install boost
+          sudo -E sudo vcpkg export boost --7zip
