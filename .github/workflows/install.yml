@@ -1,0 +1,19 @@
+name: CI Build
+
+on: 
+  push:
+  schedule:
+    - cron: '0 23 * * *'
+
+jobs:
+  InstallBoost:
+    name: install boost in linux
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v2
+      
+      - name: Vcpkg Search Boost
+        uses:
+          sudo -E vcpkg search boost 
