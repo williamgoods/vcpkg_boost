@@ -15,5 +15,5 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Vcpkg Search Boost
-        uses:
+        run: |
           sudo -E vcpkg search boost 
